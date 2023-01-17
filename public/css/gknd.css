@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html, #main-app-container{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#main-app-container{
+    position: relative;
+    background-color: rgba(0, 0, 0, 1.0);
+}
+
+#main-scene-container{
+    width: 720px;
+    height: 480px;
+    position: absolute;
+    z-index: 5;
+    display: block;
+    top: 48%;
+    left: 50%;
+    margin: -240px 0 0 -360px;
+    transition: opacity 3.5s;
+}
+
+.hidden-scene{
+    opacity: 0;
+}
+
+.visible-scene{
+    opacity: 1.0;
+}
+
+
+#gknd-logo-button-container{
+    position: absolute;
+    background-image: url(../media/img/gknd-logo.png);
+    background-size: 110% 100%;
+    background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat no-repeat;
+    border: 0;
+    cursor: pointer;
+    z-index: 10;
+    transition: top 2.5s, left 2.5s, width 2.5s, height 2.5s, margin 2.5s;
+}
+
+.loading-screen-logo-container{
+    width: 350px;
+    height: 350px;
+    top: 45%;
+    left: 50%;
+    margin: -175px 0 0 -175px;
+}
+
+.corner-logo-container{
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 7%;
+    margin: -50px 0 0 -50px;
+}
+
+.corner-logo-container:hover{
+    width: 120px;
+    height: 120px;
+}
+
+@media only screen and (max-width: 640px){
+    #main-scene-container{
+        width: 100%;
+        height: 100%;
+        /*position: absolute;
+        z-index: 5;
+        display: block;*/
+        top: 0;
+        left: 0;
+        margin: 0;
+        /*transition: opacity 3.5s;*/
+    }
+}

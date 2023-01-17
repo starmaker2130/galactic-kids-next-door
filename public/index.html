@@ -6,10 +6,30 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Codename: Galactic Kids Next Door</title>
     <link rel="stylesheet" type="text/css" href="./css/gknd.css" />
+    <script src="./js/aframe1.3.0.min.js"></script>
+    <script src="./js/GalacticKidsNextDoor.Series.js"></script>
+    <script src="./js/Series.Lyoko.js"></script>
 </head>
 <body>
     <div id="main-app-container">
-        <input id="gknd-logo-container" class="loading-screen-logo-container" value="" type="button"/>
+        <input id="gknd-logo-button-container" class="loading-screen-logo-container" value="" type="button"/>
     </div>
+    <a-scene id="main-scene-container" embedded width="720" height="480" class="hidden-scene">
+        <a-assets timeout="60000">
+            <img id="earth-texture" src="./media/img/earth-texture.png" />
+            <img id="starry-sky-texture" src="./media/img/starry-sky-texture.avif" />
+
+        </a-assets>
+
+        <a-sphere id="planet-earth-body-object-subject-container"
+                position="0 1.25 -160"
+                radius="64"
+                rotation="0 0 0"
+                material="src: #earth-texture; side: double;"
+                animation="property: rotation; from: 0 0 0; to: 0 360 0; loop: true; dur: 48000; easing: linear; pauseEvents: pauseInitialEarthRotation;">
+        </a-sphere>
+        
+        <a-sky id="sky-container" src="#starry-sky-texture"></a-sky>
+    </a-scene>
 </body>
 </html>

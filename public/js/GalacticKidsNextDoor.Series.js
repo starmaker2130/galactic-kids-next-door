@@ -1,0 +1,3 @@
+var Series = {
+    name: "GalacticKidsNextDoor"
+};
